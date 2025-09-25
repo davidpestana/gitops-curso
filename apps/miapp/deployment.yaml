@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miapp
+  labels:
+    app: miapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: miapp
+  template:
+    metadata:
+      labels:
+        app: miapp
+    spec:
+      containers:
+      - name: miapp
+        image: ghcr.io/davidpestana/proyecto-curso:v1.0.0
+        ports:
+        - containerPort: 3000
