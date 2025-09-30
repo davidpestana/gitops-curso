@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./apps/miapp
+  path: ./environments/digital-ocean/miapp
   prune: true
   sourceRef:
     kind: GitRepository
